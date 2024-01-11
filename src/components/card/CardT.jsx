@@ -1,18 +1,18 @@
 import { data } from "../data/DataInfo";
 import styles from "./CardT.module.css";
-//let isActive = false;
+let isActive = false;
 
 function CardT(props) {
   return (
     <>
-      {props.data.map((el, index) => (
-        // {
-        //     { el.category } === 'new'
-        //         ? isActive = { true }
-        //     : isActive = { false }}
-        //<div className={isActive ? {styles.cardImportant} : {styles.card} } key={index}></div>
+      {props.data.map((el, index) => {
+        el.category === "new" ?
+          isActive = true
+          :
+          isActive = false;
 
-        <div className={styles.card} key={index}>
+       return (
+         <div className={isActive ? styles.cardImportant : styles.card} key={index}>
           <h2 className={styles.name}> {el.name}</h2>
 
           <div className={styles.itemProperties}>
@@ -27,11 +27,10 @@ function CardT(props) {
             <div className={styles.info}>{el.info}</div>
           </div>
         </div>
-      ))}
-    </>
-
-    //console.log(data);
-  );
+      )})}
+    </>)
 }
+
+
 console.log(data);
 export default CardT;
