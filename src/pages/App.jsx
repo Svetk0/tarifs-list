@@ -1,7 +1,8 @@
 
 import './App.css';
-import CardT from './components/card/CardT';
-import { data } from './components/data/DataInfo';
+//import CardT from '../components/card/CardT';
+import CardT from '../components/card/CardT'
+import { data } from '../components/data/DataInfo';
 function App() {
   return (
     <div className="containerMain">
