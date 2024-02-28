@@ -7,6 +7,7 @@ function CardT(props) {
   const [selected, setSelected] = useState(false);
   const handleChange = () => {
     setSelected(!selected);
+    console.log('clicked');
 };
 
   return (
